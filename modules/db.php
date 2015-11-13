@@ -94,6 +94,20 @@ class db
 				break;
 			}
 			break;
+
+			case "calificacion":
+			switch($options['lvl2'])
+			{
+				case "normal":
+					$codigo = mysqli_real_escape_string($this->cn, $object->get('codigo'));;
+					$parque = mysqli_real_escape_string($this->cn, $object->get('parque'));;
+					$valor = mysqli_real_escape_string($this->cn, $object->get('valor'));;
+					$fecha = mysqli_real_escape_string($this->cn, $object->get('fecha'));;
+
+					$this->do_operation("INSERT INTO calificacion(codigo, parque, valor, fecha) VALUES('$codigo', '$parque', '$valor', '$fecha');");
+				break;
+			}
+			break;
 			
 			default: break;
 		}
