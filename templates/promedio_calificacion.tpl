@@ -1,0 +1,1 @@
+<p>La nota promedio de los parques de nivel alto fue: {$promedio}</p>
